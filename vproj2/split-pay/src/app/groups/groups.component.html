@@ -1,0 +1,15 @@
+<div class="app-container">
+  <app-nav></app-nav>
+  <main>
+    <h1>Groups</h1>
+    <ul class="card">
+      <div *ngFor="let group of groupData ">
+        <li  routerLink="/detail/{{ group.groupId }}" class="borderlist">
+          <p>{{ group.groupName }}</p>
+        </li>
+      </div>
+      <br><br>
+      <button class="sub" type  ="submit" routerLink="/newGroup">ADD GROUP ></button>
+    </ul>
+</main>
+</div>

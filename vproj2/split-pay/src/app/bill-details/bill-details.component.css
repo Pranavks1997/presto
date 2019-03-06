@@ -1,0 +1,15 @@
+.app-container > main {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1em;
+    padding: .5em 2em;
+  }
+  
+  button {
+    float: left;
+    padding-top: -2.5rem!important;
+    background-color: rgba(0, 0, 0, 0.972);
+    text-emphasis-color: rgb(255, 255, 255);
+    text-decoration-color:  rgb(255, 255, 255);
+    color: aliceblue;
+  }

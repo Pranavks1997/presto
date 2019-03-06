@@ -1,0 +1,26 @@
+<div class="app-container create-container">
+  <app-nav></app-nav>
+  <main>
+    <h1>New GROUP!</h1>
+    <form (submit)='createdGroup()'>
+      <section class="title-container">
+        <label> GROUP NAME:</label>
+        <input class="title-text" type="text" [formControl]="groupName" placeholder="Text">
+      </section>
+      <section>
+        <label>GROUP ID:</label>
+        <input class="title-text" type="number" [formControl]="groupId" placeholder="Ex. 1,2..">
+      </section>
+      <section>
+        <label>SELECT FRIENDS:</label>
+        <select class = "opts" placeholder="Select users" [formControl]="users" multiple>
+          <option *ngFor="let user of userData" [value]="user">{{ user.name }}</option>
+        </select>
+      </section>
+      <br><br>
+      <section class="submit-section">
+        <button type="submit">Submit ></button>
+      </section>
+    </form>
+  </main>
+</div>

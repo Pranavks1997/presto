@@ -1,0 +1,16 @@
+<div class="app-container">
+    <app-nav></app-nav>
+    <main>
+      <h1>Users</h1>
+      <ul class="card">
+        <div *ngFor="let user of groupData ">
+          <li routerLink="/userDetail/{{ user.userId }}" class="borderlist">  
+            <p class="badge">{{ user.name }}</p>
+            <p>{{ user.emailId }}</p>
+          </li>
+        </div>
+        <br><br>
+        <button routerLink="/newUser"type="submit" class="sub">ADD USER ></button>
+      </ul>
+    </main>   
+  </div>

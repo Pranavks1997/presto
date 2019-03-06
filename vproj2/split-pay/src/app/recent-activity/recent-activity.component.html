@@ -1,0 +1,15 @@
+<div class="app-container">
+  <app-nav></app-nav>
+  <main>
+    <h1>Recent Activity</h1>
+    <ul class="card">
+      <div *ngFor="let recent of groupData ">
+        <li class="borderlist"  routerLink="/billDetails/{{recent.billId}}"> 
+          <p>Title : {{ recent.title }}</p>
+          <p>Description: {{ recent.description }}</p>
+          <p>Rs. {{ recent.amount }}</p>
+        </li>
+      </div>
+    </ul>
+  </main>   
+</div>

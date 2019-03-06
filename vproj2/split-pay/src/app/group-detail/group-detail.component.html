@@ -1,0 +1,41 @@
+<div class="app-container">
+    <app-nav></app-nav>
+    <main>
+      <h1>Group Users</h1>
+      <div class="g1">
+      <ul class="card g1">
+        <div *ngFor="let user of groupData "  class="divide">
+          <li class="borderlist">
+            <p class="badge">{{ user.userId }}</p>
+            <p>{{ user.name }}</p>
+            <p>{{ user.emailId }}</p>
+          </li>
+        </div>
+      </ul>
+    </div>
+      <ul class="card g2">
+          <div *ngFor="let balance of updatedBalance " class="divide">
+            <li class="borderlist2">
+              <br><br>
+              <p>Your balance: {{ balance }}</p>
+              <br>
+            </li>
+          </div>
+             <br><br>
+          <button routerLink="/bill/{{ gid }}" type="button">ADD BILL</button>
+        </ul>
+          <p>List of Bills of this group</p>
+        <div class="g1">
+            <ul class="card g1">
+              <div *ngFor="let bill of groupBills ">
+                <li class="borderlist2">
+                  <p>Title: {{ bill.title }}</p>
+                  <p>Descriptioin: {{ bill.description }}</p>
+                  <p>Rs. {{ bill.amount }}</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+      
+  </main>
+  </div>

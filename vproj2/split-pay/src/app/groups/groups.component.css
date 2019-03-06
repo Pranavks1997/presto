@@ -1,0 +1,50 @@
+.app-container > main {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1em;
+    padding: .5em 2em;
+    align-content: center;
+  }
+  .card .container li {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0.5em;
+    align-content: center;
+    
+  }
+  li{
+
+    border: 1 em;
+
+  }
+  .card li {
+    list-style-type: none;
+    padding: 0.5em;
+    align-content: center;
+}
+.card {
+  border-color: black;
+  text-align: center;
+  align-content: center;
+
+
+}
+.borderlist {
+  list-style-position:inside;
+  border: 1px solid rgba(0, 0, 0, 0.246);
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.123);
+  width:40vw;
+  align-content: center;  
+
+}
+.sub {
+  float: left;
+}
+
+  p {
+    grid-column: 1 / span 2;
+    font-size: 1.2em;
+
+  }

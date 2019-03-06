@@ -1,0 +1,43 @@
+<div class="app-container create-container">
+  <app-nav></app-nav>
+  <main>
+    <h1>New Bill!</h1>
+    <!-- <p>{{groupData.groupName}}</p> -->
+
+    <form (submit)='createdBill()'>
+      <section class="title-container">
+        <label> Title:</label>
+        <input class="title-text" type="text" [formControl]="title" placeholder="Text">
+      </section>
+      <section>
+        <label>Bill ID:</label>
+        <input class="title-text" type="number" [formControl]="billId" placeholder="Ex. 1,2..">
+      </section>
+      <section>
+        <label>DESCRIPTION:</label>
+        <input class="title-text" type="text" [formControl]="description" placeholder="Description of bill">
+      </section>
+      <section>
+        <label>AMOUNT:</label>
+        <input class="title-text" type="number" [formControl]="amount" placeholder="Amount spent">
+      </section>
+      <section>
+        <label>PAYER:</label>
+        <select placeholder="Select payee" [formControl]="uid">
+          <option *ngFor="let user of userData" [value]="user.userId">{{ user.name }}</option>
+        </select>
+      </section>
+
+      <section>
+        <label>SELECT FRIENDS:</label>
+        <select class="opts" placeholder="Select users" [formControl]="users" multiple>
+          <option *ngFor="let user of userData" [value]="user.userId">{{ user.name }}</option>
+        </select>
+      </section>
+
+      <section class="submit-section">
+        <button type="submit">Submit ></button>
+      </section>
+    </form>
+  </main>
+</div>

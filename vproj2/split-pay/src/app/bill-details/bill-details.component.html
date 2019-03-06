@@ -1,0 +1,17 @@
+<div class="app-container">
+  <app-nav></app-nav>
+  <main>
+    <h1>Group Details!</h1>
+    <ul class="card">
+          <p>Title :{{billData.title }}</p>
+          <p>Bill Description: {{ billData.description }}</p>
+          <p>Amount: {{ billData.amount }}</p>
+          <p>Paid By: {{ billData.userId }}</p>
+          <p>By group: {{ billData.groupId }}</p>
+          <p>Bill Participants: {{ billData.participants }}</p>
+          <p><button class="editButton"  routerLink="/editBill/{{billData.billId}}"  type="submit" class="sub">EDIT BILL ></button></p>
+          <br><br>
+          <p><button class="editButton"  type="secondary" (click)="deleteBill()" class="sub">DELETE BILL ></button></p>
+    </ul> 
+  </main>   
+</div>

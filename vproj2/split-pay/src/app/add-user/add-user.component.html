@@ -1,0 +1,24 @@
+<div class="app-container create-container">
+    <app-nav></app-nav>
+    <main>
+      <h1>New FRIEND!</h1>
+      <form (submit)='createdUser()'>
+        <section class="title-container">
+          <label> USER NAME:</label>
+          <input class="title-text" type="text" [formControl]="userName" placeholder="Text">
+        </section>
+        <section>
+          <label>USER ID:</label>
+          <input class="title-text" type="number" [formControl]="userId" placeholder="Ex. 1,2..">
+        </section>
+        <section>
+            <label> USER EMAIL:</label>
+            <input class="title-text" type="text" [formControl]="userEmail" placeholder="Text">
+          </section>
+        <br><br>
+        <section class="submit-section">
+          <button type="submit" >Submit ></button>
+        </section>
+      </form>
+    </main>
+  </div>

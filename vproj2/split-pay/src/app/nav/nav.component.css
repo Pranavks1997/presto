@@ -1,0 +1,20 @@
+nav {
+    height: 100vh;
+    padding: 1em 2em;
+    color: white;
+    height: 100 vh;
+  }
+  
+  nav > ul {
+    list-style-type: none;
+    padding: 0
+  }
+  
+  ul > li {
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+  }
+ /* nav ul li text {
+    text-decoration-color: white;
+  } */
